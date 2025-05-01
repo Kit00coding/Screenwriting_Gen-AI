@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Screenwriting.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="AI Video Pipeline.js"></script> -->
+</head>
+<body>
+
+    <!-- Container for header and navigation -->
+    <div id= "Back">
+        <div id="headercontainer"><h4 align ="left" style="vertical-align:top;">AI Video Pipeline</h4>
+            <div class= "everyfont"></div>
+				<a href="Storyboard.html"><button class= "Button"align = "right"style="vertical-align: top;">Storyboard</button></a>&nbsp;&nbsp;
+				<a href="Video.html"><button class= "Button"align = "right"style="vertical-align:top;">Video</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="History.html"><img src="UserIcon.png" alt="user" width="26" height="24" style="vertical-align: top;">
+				</a>&nbsp;&nbsp;&nbsp;
+				<a href="History.html"align ="right"style="vertical-align:top;">Your&nbsp;<br> History</a>
+				<h2 align = "center"style="vertical-align: top;">Screenwriting</h2>
+				<!--this is the start of the first sidebar that will contain screenwriting generation tweaking-->
+				<div id="sidebar1">
+					<p>Select Model</p>
+
+					<select name="pets" id="pet-select">
+					<option value="">--Please choose an option--</option>
+					<option value="llama3.2">llama3.2latest</option>
+					</select><br><br>
+					<p>Temperature</p>
+					<div class="Numberslider">
+						<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+						<p>Value: <span id="demo"></span></p>
+					  </div>
+					  
+					  <script>
+					  var slider = document.getElementById("myRange");
+					  var output = document.getElementById("demo");
+					  output.innerHTML = slider.value;
+					  
+					  slider.oninput = function() {
+						output.innerHTML = this.value;
+					  }
+					  </script> <br><br>
+					<p>Number of Runs</p>
+					<div class="Numberslider">
+						<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+						<p>Value: <span id="demo"></span></p>
+					  </div>
+					  
+					  <script>
+					  var slider = document.getElementById("myRange");
+					  var output = document.getElementById("demo");
+					  output.innerHTML = slider.value;
+					  
+					  slider.oninput = function() {
+						output.innerHTML = this.value;
+					  }
+					</script> <br><br>
+				</div>
+					<!--this is the start of container 3-->
+			<div id="container3">
+					<!--This is the 2nd sidebar that will hold Screenwriting prompt text input-->
+				<div id="sidebar2">
+					<form action="/action_page.php">
+						<label> Enter your screenplay</label><br>
+							<textarea rows="20" cols="50" name="Description" spellcheck = 	"true">Text input
+							</textarea><br><br>
+							<input type="submit" value="Analyze Screenplay">
+						</form><br> 
+					<button class= "Button"align = "right">Copy Screenplay</button>
+
+				</div>
+            
+					<!--Finally this is the 3rd sidebar that holds the display console-->
+				<div id="sidebar3"><p>Display Console</p><br>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
